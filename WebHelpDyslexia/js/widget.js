@@ -123,15 +123,25 @@ webHelpDyslexia.widget = {
 			//$("#webHelpDyslexia-tail").prepend(div3);
 			//div4 = $("<div id='webHelpDyslexia-black'>");
 			//$("#webHelpDyslexia-tail").prepend(div4);
-			if(!document.getElementById('webHelpDyslexia-blackUper'))
-			{
-				var divUpper = $("<div id='webHelpDyslexia-blackUper'>");
-				var divBottton = $("<div id='webHelpDyslexia-blackBotton'>");
-			}
 			sel = $(this).find('option:selected').val();
-			tam = parseInt(sel);
-			$("body").prepend(divUpper);
-			$("body").prepend(divBottton);
+			if(sel == '')
+			{
+				if(document.getElementById('webHelpDyslexia-blackUper'))
+				{
+					removeOnlyBlackTags();
+				}
+			}
+			else
+			{
+				if(!document.getElementById('webHelpDyslexia-blackUper'))
+				{
+					var divUpper = $("<div id='webHelpDyslexia-blackUper'>");
+					var divBottton = $("<div id='webHelpDyslexia-blackBotton'>");
+				}
+				tam = parseInt(sel);
+				$("body").prepend(divUpper);
+				$("body").prepend(divBottton);
+			}
          });
 	
 	var data = {

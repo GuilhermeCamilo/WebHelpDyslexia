@@ -31,6 +31,7 @@
             "js/libs/jquery.tipsy.js",
             "js/libs/spectrum.js",
             "js/style.js",
+			"js/functionsAndExtras.js",
 			"js/events.js"
 
         ],
